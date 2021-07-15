@@ -28,7 +28,8 @@ public class UrlCheckoController {
             int responsecategory = conn.getResponseCode() / 100;
             if (responsecategory == 2 || responsecategory == 3) {
 
-                returnMessage = IS_the_up;
+                returnMessage = IS_the_up + " response number => " + responsecategory + " ==> "
+                + conn.getResponseCode();
 
             } else {
                 returnMessage = IS_the_down + " response number => " + responsecategory + " ==> "
