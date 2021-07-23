@@ -15,7 +15,9 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<azure.version>3.5.0</azure.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -32,9 +34,44 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>		 
-    
+		</dependency>	
+		<dependency>
+			<groupId>com.azure.spring</groupId>
+			<artifactId>azure-spring-boot-bom</artifactId>
+			<version>3.7.0</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.azure.spring</groupId>
+			<artifactId>azure-spring-cloud-dependencies</artifactId>
+			<version>2.7.0</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>	 
+		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>azure-keyvault-secrets-spring-boot-starter</artifactId>
+			<version>2.3.5</version>
+		</dependency>
+		<dependency>
+		<groupId>com.azure</groupId>
+			<artifactId>azure-security-keyvault-secrets</artifactId>
+			<version>4.3.1</version>
+	</dependency>
+		 
 	</dependencies>
+	<dependencyManagement>
+     <dependencies>
+         <dependency>
+             <groupId>com.azure.spring</groupId>
+             <artifactId>azure-spring-boot-bom</artifactId>
+             <version>${azure.version}</version>
+             <type>pom</type>
+             <scope>import</scope>
+         </dependency>
+     </dependencies>
+</dependencyManagement> 
 
 	<build>
 		<plugins>
