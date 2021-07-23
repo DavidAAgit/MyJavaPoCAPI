@@ -9,7 +9,7 @@ import java.net.URL;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.linguafranca.pwdb.Visitor.Print;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @RestController
@@ -30,7 +30,7 @@ public class UrlCheckoController {
 
             String val1 = System.getenv("javavalue2");
             String val2 = System.getenv("myvalue1");
-            String connectionstring = System.getenv("strconnection");
+            String connectionstring = System.getenv("CUSTOMCONNSTR_strconnection");
 
             URL urlobj = new URL(url);
             HttpURLConnection conn = (HttpURLConnection) urlobj.openConnection();
