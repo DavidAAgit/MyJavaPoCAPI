@@ -1,5 +1,4 @@
-package com.example.azure.keyvault;
-
+ 
 import com.microsoft.aad.adal4j.AuthenticationContext;
 import com.microsoft.aad.adal4j.AuthenticationResult;
 import com.microsoft.aad.adal4j.ClientCredential;
