@@ -81,33 +81,4 @@ public class UrlCheckoController {
         }
         return returnMessage;
     }
-
-/*
-    private string getkeyvaulvalue()
-    {
-        string messages ="";
-        try{
-        azure.keyvault.enabled=true;
-        azure.keyvault.uri="https://gfdqakeyvault.vault.azure.net/secrets/GFD-ConnectionString/96ae9d85e8e44dd4b9a1a79edc9b18ff"
-        azure.keyvault.client-id=  "f759d22c-9242-41e1-b52d-777187a17eb8";//put-your-azure-client-id-here
-        azure.keyvault.client-key=  "LrBEWOpC2546z11~.XZ-A38.C4~j8Gq-4H"; //put-your-azure-client-key-here
-        azure.keyvault.tenant-id= "49793faf-eb3f-4d99-a0cf-aef7cce79dc1";  //put-your-azure-tenant-id-here
-        azure.keyvault.token-acquire-timeout-seconds=60
-        azure.keyvault.refresh-interval=1800000
-        azure.keyvault.secret-keys=""
-        //azure.keyvault.authority-host=put-your-own-authority-host-here(fill with default value if empty)
-        azure.keyvault.secret-service-version=specify secretServiceVersion value(fill with default value if empty)
-         var conn =  spring.cloud.azure.appconfiguration.stores[0].connection-string=${CUSTOMCONNSTR_strconnection};
-            
-        messages += " coonection : " +conn;
-    
-        }
-         catch (Exception e) {
-            messages += " error : " + e.getMessage();
-        }
-        return  messages;
-    }
-    */
-
-
 }
