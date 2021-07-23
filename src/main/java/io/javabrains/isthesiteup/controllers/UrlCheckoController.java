@@ -23,6 +23,7 @@ import com.microsoft.aad.adal4j.ClientCredential;
 import com.azure.identity.DefaultAzureCredentialBuilder;
 import com.azure.security.keyvault.secrets.SecretClient;
 import com.azure.security.keyvault.secrets.SecretClientBuilder;
+import com.azure.security.keyvault.secrets.models.KeyVaultSecret;
 
 @RestController
 public class UrlCheckoController {
@@ -58,14 +59,14 @@ public class UrlCheckoController {
             // KEYVAULT_URL is the location of the keyvault to use:
             // https://yourkeyvault.vault.azure.net
             // "testSecret" is the name of the secret in the key vault
-            Object secret = client.getSecret(KEYVAULT_URL, "GFD-ConnectionString");
-            log(client.getSecret(KEYVAULT_URL, "GFD-ConnectionString").value());
+            KeyVaultSecret secret = client.getSecret(KEYVAULT_URL, "GFD-ConnectionString");
+            log(client.getSecret(KEYVAULT_URL, "GFD-ConnectionString"));
 
             int responsecategory = conn.getResponseCode() / 100;
             if (responsecategory == 2 || responsecategory == 3) {
 
                 returnMessage = " the value1 " + val1 + " value 2" + val2 + " value 2" + connectionstring + " secret: "
-                        + secret.value();
+                        + secret.getValue() + "   :" + secret.getName();
 
                 returnMessage = "######" + IS_the_up + " response number => " + responsecategory
                         + "; reponse value ==> " + conn.getResponseCode() + "!!!!!#####" + returnMessage;
