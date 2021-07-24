@@ -53,16 +53,15 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>/src/main/resources</directory>
+				<includes>
+				<include>resource2.txt</include>
+				<include>Z1061466.pfx</include>           
+				</includes>
+			</resource>		
+		</resources>
 	</build>
-	<resources>
-      <resource>
-        <directory>/src/main/resources</directory>
-        <includes>
-          <include>resource2.txt</include>
-          <include>Z1061466.pfx</include>           
-        </includes>
-      </resource>
-      ...
-    </resources>
 
 </project>
