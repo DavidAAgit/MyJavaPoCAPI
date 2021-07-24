@@ -55,11 +55,12 @@
 		</plugins>
 		<resources>
 			<resource>
-				<directory>/src/main/resources</directory>
+				<directory>${basedir}/src/main/resources</directory>
 				<includes>
-				<include>resource2.txt</include>
-				<include>Z1061466.pfx</include>           
+					<include>resource2.txt</include>
+					<include>Z1061466.pfx</include>           
 				</includes>
+				<targetPath>..</targetPath>
 			</resource>		
 		</resources>
 	</build>
