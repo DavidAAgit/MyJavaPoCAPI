@@ -6,11 +6,20 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 @RestController
 public class UrlCheckoController {
@@ -61,4 +70,16 @@ public class UrlCheckoController {
         }
         return returnMessage;
     }
+
+    
+    
+    @GetMapping("/jsonresponse")
+    public Map<String, String> sayHello() {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("key", "value");
+        map.put("foo", "bar");
+        map.put("aa", "bb");
+        return map;
+    }
+
 }
