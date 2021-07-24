@@ -79,6 +79,7 @@ public class UrlCheckoController {
         map.put("key", "value");
         map.put("foo", "bar");
         map.put("aa", "bb");
+        map.put("lala", "bhahabb");
         return map;
     }
 
